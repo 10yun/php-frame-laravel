@@ -1,0 +1,77 @@
+{
+    "name": "shiyun/php-laravel",
+    "version": "1.0.1",
+    "type": "library",
+    "description": "shiyun ctocode frame extend thinkphp  shiyun/php-laravel",
+    "description2": "php worker for shiyun，workerman的一些二次封装",
+    "keywords": [
+        "mqtt",
+        "mqtt_client",
+        "mqtt3",
+        "mqtt5.0",
+        "rabbitmq",
+        "queue",
+        "redis",
+        "amqp",
+        "event-loop",
+        "php",
+        "workerman"
+    ],
+    "homepage": "https://docs.10yun.com/php/",
+    "license2": "Apache-2.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ctocode",
+            "email": "343196936@qq.com"
+        },
+        {
+            "name": "十云",
+            "email": "syky@10yun.com"
+        }
+    ],
+    "support": {
+        "email": "343196936@qq.com",
+        "issues": "https://github.com/10yun/php-frame-laravel/issues",
+        "forum": "http://docs.10yun.com/php/",
+        "wiki": "http://docs.10yun.com/php/",
+        "source": "https://github.com/10yun/php-frame-laravel"
+    },
+    "require": {
+        "php": "^8",
+        "ext-fileinfo": "*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "ext-json": "*",
+        "ext-curl": "*",
+        "ext-bcmath": "*",
+        "php": "^8"
+    },
+    "autoload": {
+        "psr-4": {
+            "shiyunQueue\\": "src\\queue",
+            "shiyunOpensdk\\": "src\\opensdk",
+            "shiyun\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "shiyun\\test\\queue\\": "tests"
+        }
+    },
+    "extra": {
+        "shiyun": {
+            "services": [
+                "shiyunWorker\\Bootstrap"
+            ],
+            "config": {
+                "shiyun/annotation": "src/config/annotation.php"
+            }
+        }
+    },
+    "minimum-stability": "dev"
+}
